@@ -1,1 +1,150 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Boy Movement - Nigeria Gallery & App</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #ff6600;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .app-download {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    .app-download a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 10px 20px;
+      background-color: #004080;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .app-download a:hover {
+      background-color: #00264d;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .gallery-item {
+      flex: 1 1 250px;
+      max-width: 300px;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s;
+    }
+    .gallery-item:hover {
+      transform: translateY(-5px);
+    }
+    .gallery-item img {
+      width: 100%;
+      display: block;
+    }
+    .caption {
+      padding: 0.8rem;
+      text-align: center;
+      font-size: 0.95rem;
+      background-color: #f4f4f4;
+      flex-grow: 1;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #ff6600;
+      color: white;
+      margin-top: 2rem;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .gallery-item {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>City Boy Movement - Nigeria</h1>
+    <p>Gallery of Events, Leaders, and Activities</p>
+  </header>
+
+  <div class="app-download">
+    <h2>Download the City Boy Movement App</h2>
+    <a href="#" target="_blank">Download for Android</a>
+    <a href="#" target="_blank">Download for iOS</a>
+  </div>
+
+  <section class="gallery">
+    <div class="gallery-item">
+      <img src="https://res.cloudinary.com/dxmzwb2gm/image/upload/v1769202568/news/pxoif5r9spubkqqpltrz.jpg" alt="City Boy Movement Event">
+      <div class="caption">Members receiving awards / certificates</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://cityboymovement.ng/assets/img/logo.png" alt="City Boy Movement Logo">
+      <div class="caption">City Boy Movement Logo</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://global.ariseplay.com/amg/www.arise.tv/uploads/2026/02/Cubana-and-APC.jpg" alt="Obi Cubana Appointment">
+      <div class="caption">Obi Cubana receiving appointment</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://res.cloudinary.com/dxmzwb2gm/image/upload/v1769202486/news/bzmk9yyawpyy4grcbgob.jpg" alt="Movement Gathering">
+      <div class="caption">City Boy Movement Gathering</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://cityboymovement.ng/assets/img/seyi.png" alt="Leader Portrait">
+      <div class="caption">Leader Portrait (Seyi Tinubu)</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://pbs.twimg.com/media/HDjRlWAWMAE0xbi.jpg" alt="Public Outreach">
+      <div class="caption">Public Outreach Activities</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://nigerianbulletin.com/attachments/obi-cubana-southeast-cordinator-of-seyi-tinubu-webp.250148/" alt="Promotional Image">
+      <div class="caption">Promotional News Image</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://cdn.legit.ng/images/1200x675/19a405ede654a7ad.jpeg?v=1" alt="Youth Event">
+      <div class="caption">Youth Event Featuring City Boy Supporter</div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 City Boy Movement - Nigeria
+  </footer>
+</body>
+</html>
