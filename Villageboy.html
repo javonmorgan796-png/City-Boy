@@ -1,1 +1,381 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Village Boy Movement - Download App</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+      background: #fef9e8;
+      color: #2c2b28;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    .site-header {
+      background: #1e3a2f;
+      color: white;
+      padding: 1rem 0;
+      border-bottom: 5px solid #e6b422;
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo h1 {
+      font-size: 1.6rem;
+      letter-spacing: -0.5px;
+    }
+
+    .logo p {
+      font-size: 0.85rem;
+      opacity: 0.85;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+      border-bottom-color: #e6b422;
+    }
+
+    /* Download button style */
+    .download-btn {
+      background: #e6b422;
+      color: #1e3a2f;
+      padding: 0.6rem 1.2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .download-btn:hover {
+      background: #c99f1a;
+      transform: scale(1.05);
+    }
+
+    .download-btn-large {
+      background: #e6b422;
+      color: #1e3a2f;
+      padding: 1rem 2rem;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      transition: 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .download-btn-large:hover {
+      background: #c99f1a;
+      transform: scale(1.05);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #2b5e3b 0%, #1e3a2f 100%);
+      color: white;
+      text-align: center;
+      padding: 4rem 1.5rem;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero .tagline {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 1rem auto;
+      opacity: 0.9;
+    }
+
+    .hero .quote {
+      font-style: italic;
+      margin-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.3);
+      display: inline-block;
+      padding-top: 1rem;
+    }
+
+    .img-placeholder {
+      background: #d9c8a9;
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+      color: #4a3b1c;
+      font-weight: 500;
+      margin: 2rem 0;
+      border: 2px dashed #b5925a;
+    }
+
+    .img-placeholder img {
+      max-width: 100%;
+      border-radius: 16px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .vision-mission {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .card {
+      flex: 1;
+      background: white;
+      border-radius: 28px;
+      padding: 2rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      border: 1px solid #e9e0cf;
+    }
+
+    .card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #1e3a2f;
+      border-left: 6px solid #e6b422;
+      padding-left: 1rem;
+    }
+
+    .signature {
+      margin-top: 2.5rem;
+      padding: 1.5rem;
+      background: #f5efe2;
+      border-radius: 28px;
+      text-align: center;
+    }
+
+    /* App download section */
+    .app-section {
+      background: linear-gradient(135deg, #1e3a2f 0%, #2b5e3b 100%);
+      border-radius: 28px;
+      padding: 3rem 2rem;
+      margin: 3rem 0;
+      text-align: center;
+      color: white;
+    }
+
+    .app-section h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .app-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #e6b422;
+      color: #1e3a2f;
+      padding: 0.8rem 2rem;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 1rem;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background: #c99f1a;
+      transform: scale(0.98);
+    }
+
+    footer {
+      background: #1e2a24;
+      color: #ccc;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 700px) {
+      .header-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+      .app-section h3 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <h1>🌾 Village Boy Movement</h1>
+      <p>Rise. Learn. Take Responsibility.</p>
+    </div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Movement</a>
+      <a href="#">Programs</a>
+      <a href="#">Join</a>
+      <!-- ANDROID APP DOWNLOAD BUTTON IN NAVIGATION -->
+      <a href="#" class="download-btn" id="downloadNavBtn">
+        📱 Download App
+      </a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h2>Welcome to the Village Boy Movement.</h2>
+    <p class="tagline">The future of Nigeria cannot be built by leaders alone.<br> It must be built by <strong>me and you</strong>.</p>
+    <div class="quote">
+      “We are moving away from dependency and toward a mindset of productivity, integrity, and innovation.”
+    </div>
+    <!-- DOWNLOAD BUTTON IN HERO SECTION -->
+    <div style="margin-top: 2rem;">
+      <a href="#" class="download-btn-large" id="downloadHeroBtn">
+        📲 Download Android App
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <!-- IMAGE SECTION 1 -->
+  <div class="img-placeholder">
+    <p>👇 INSERT YOUR OWN IMAGE HERE (agriculture + tech or community)</p>
+    <img src="https://placehold.co/1000x500/f0e5d2/5a3e1b?text=Your+Image+Here" alt="Village Boy Movement image placeholder">
+    <p style="margin-top: 0.8rem; font-size: 0.9rem;"><em>Example: Add a photo of Nigerian youth farming, coding, or community gathering.</em></p>
+  </div>
+
+  <div class="vision-mission">
+    <div class="card">
+      <h3>Vision Statement</h3>
+      <p>To see a Nigeria where citizens are economically empowered, socially responsible and politically conscious. Where they are able to stand with dignity, contribute productively to society and shape the future of their nation through informed and responsible participation.</p>
+    </div>
+    <div class="card">
+      <h3>Mission Statement</h3>
+      <p>The Village Boy Movement exists to promote economic emancipation, responsible citizenship and a culture of productivity among Nigerians.</p>
+      <p style="margin-top: 1rem;">We educate, inspire and mobilize ordinary citizens, especially young people, to develop skills, pursue entrepreneurship, embrace integrity and participate constructively in national development.</p>
+      <p style="margin-top: 1rem;">We also support and advocate for leadership that prioritizes accountability, prudent management of public resources, investment in people and sustainable economic growth.</p>
+    </div>
+  </div>
+
+  <!-- DEDICATED APP DOWNLOAD SECTION -->
+  <div class="app-section">
+    <h3>🚀 Get the Village Boy Movement App</h3>
+    <p style="font-size: 1.1rem; margin: 1rem 0;">Stay connected, access resources, join events, and track your progress — all from your Android phone.</p>
+    <div class="app-buttons">
+      <a href="#" class="download-btn-large" id="downloadSectionBtn">
+        📥 Download for Android
+      </a>
+    </div>
+    <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.9;">✓ Free download  |  ✓ Works offline  |  ✓ Community features</p>
+  </div>
+
+  <!-- IMAGE SECTION 2 -->
+  <div class="img-placeholder">
+    <p>📸 ADD YOUR SECOND IMAGE (e.g., portrait of Sir Blaise or a workshop)</p>
+    <img src="https://placehold.co/1000x400/f0e5d2/5a3e1b?text=Movement+In+Action" alt="Movement action image">
+  </div>
+
+  <div class="signature">
+    <p style="font-size: 1.2rem;"><strong>Sir Blaise Ezeokeke</strong><br>President, Village Boy Movement</p>
+    <p>“Dignity comes from honest work. Power comes from knowledge.”</p>
+    <a href="#" class="btn" id="joinBtn">Join the movement →</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 Village Boy Movement — Economic Emancipation • Responsible Citizenship • Productivity</p>
+  <p style="margin-top: 0.5rem; font-size: 0.85rem;">📍 Nigeria | contact@villageboymovement.org</p>
+  <!-- DOWNLOAD BUTTON IN FOOTER -->
+  <div style="margin-top: 1.5rem;">
+    <a href="#" class="download-btn" id="downloadFooterBtn">
+      📱 Download Android App
+    </a>
+  </div>
+</footer>
+
+<!-- JavaScript to handle download button clicks -->
+<script>
+  // This function will be called when any download button is clicked
+  function handleDownloadClick(event) {
+    event.preventDefault();
+    
+    // Replace this URL with your actual Android app download link
+    // For example: Google Play Store link, APK download link, or your website's download page
+    const appDownloadUrl = "https://play.google.com/store/apps/details?id=com.villageboy.movement";
+    
+    // Open the download link in a new tab
+    window.open(appDownloadUrl, '_blank');
+    
+    // Optional: Show a confirmation message
+    console.log("Android app download initiated");
+    alert("Thank you for downloading the Village Boy Movement App!\n\nYou will be redirected to the download page.");
+  }
+  
+  // Add click event listeners to all download buttons
+  document.getElementById('downloadNavBtn').addEventListener('click', handleDownloadClick);
+  document.getElementById('downloadHeroBtn').addEventListener('click', handleDownloadClick);
+  document.getElementById('downloadSectionBtn').addEventListener('click', handleDownloadClick);
+  document.getElementById('downloadFooterBtn').addEventListener('click', handleDownloadClick);
+  
+  // Also add to any future buttons with class 'download-btn' or 'download-btn-large'
+  document.querySelectorAll('.download-btn, .download-btn-large').forEach(btn => {
+    btn.addEventListener('click', handleDownloadClick);
+  });
+</script>
+
+</body>
+    </html>
